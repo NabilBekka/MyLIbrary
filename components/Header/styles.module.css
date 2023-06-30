@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 5px 10px;
+}
+
+.logo {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.myProfil{
+    border: solid 5px #FFF;
+    background-color: #3767DA;
+    color: #FFF;
+    height: 50px;
+    width: 150px;
+}
+
+.myProfil:hover {
+    cursor: pointer;
+    background-color: #FFF;
+    color: #3767DA;
+}
+
+@media (max-width: 950px) { 
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .myProfil{
+        height: 40px;
+        border: solid 4px #FFF;
+    }
+}
+@media (max-width: 670px) {
+    .header {
+        flex-direction: column;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .myProfil{
+        height: 30px;
+        border: solid 2px #FFF;
+    }
+}

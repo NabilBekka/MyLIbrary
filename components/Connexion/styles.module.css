@@ -1,0 +1,42 @@
+.connexion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 310px;
+}
+
+.register {
+    border: solid 5px #FFF;
+    background-color: #3767DA;
+    color: #FFF;
+    height: 50px;
+    width: 150px;
+}
+
+.login {
+    border: solid 5px #FFF;
+    background-color: #FFF;
+    color: #3767DA;
+    height: 50px;
+    width: 150px;
+}
+
+.login:hover, .register:hover {
+    cursor: pointer;
+    background-color: #FFF;
+    color: #3767DA;
+}
+
+@media (max-width: 950px) { 
+    .login, .register{
+        height: 40px;
+        border: solid 4px #FFF;
+    }
+}
+@media (max-width: 670px) { 
+    .login, .register{
+        height: 30px;
+        border: solid 2px #FFF;
+    }
+}
