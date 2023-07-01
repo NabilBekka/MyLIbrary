@@ -2,8 +2,7 @@ import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
 import Connexion from '.';
 
-const handleLogin = jest.fn();
-const handleRegister = jest.fn();
+const dispalyModal = jest.fn();
 
 describe('Test Connexion component', () => {
     test('should render register button', () => {
@@ -17,14 +16,14 @@ describe('Test Connexion component', () => {
     });
     
     test('should click on login button', () => {
-        const {getAllByRole} = render(<Connexion isLogin={handleLogin}/>);
+        const {getAllByRole} = render(<Connexion displayModal={dispalyModal}/>);
         fireEvent.click(getAllByRole('button')[1]);
-        expect(handleLogin).toBeCalled();
+        expect(dispalyModal).toBeCalled();
     });
     
     test('should click on register button', () => {
-        const {getAllByRole} = render(<Connexion isRegister={handleRegister}/>);
+        const {getAllByRole} = render(<Connexion displayModal={dispalyModal}/>);
         fireEvent.click(getAllByRole('button')[0]);
-        expect(handleRegister).toBeCalled();
+        expect(dispalyModal).toBeCalled();
     });
 });

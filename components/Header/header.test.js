@@ -13,9 +13,15 @@ describe ('Test Header component', () => {
         expect(getByRole('link').textContent).toBe('MY LIBRARY');
     });
 
-    test('should render title', () => {
-        const { getByText, getByRole } = render(<Header />);
+    test('should render Modal Component after clicking on login', () => {
+        const { getByTestId, getByText } = render(<Header />);
         fireEvent.click(getByText('Se connecter'));
-        expect(getByRole('button').textContent).toBe('Mon profil');
+        expect(getByTestId('modal')).toBeInTheDocument();
+    });
+
+    test('should render Modal Component after clicking on register', () => {
+        const { getByTestId, getByText } = render(<Header />);
+        fireEvent.click(getByText('Inscription'));
+        expect(getByTestId('modal')).toBeInTheDocument();
     });
 });
