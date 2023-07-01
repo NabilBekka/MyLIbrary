@@ -11,7 +11,7 @@ const Header = () => {
     };
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} data-testid="header">
             <Link className={styles.logo} href='/'>MY LIBRARY</Link>
             {isLogin ? <button className={styles.myProfil}>Mon profil</button> : <Connexion isLogin={handleLogin} />}
         </header>

@@ -12,6 +12,7 @@
     color: #FFF;
     height: 50px;
     width: 150px;
+    border-radius: 2px;
 }
 
 .login {
@@ -20,12 +21,14 @@
     color: #3767DA;
     height: 50px;
     width: 150px;
+    border-radius: 2px;
 }
 
 .login:hover, .register:hover {
     cursor: pointer;
     background-color: #FFF;
     color: #3767DA;
+    font-size: 1.1rem;
 }
 
 @media (max-width: 950px) { 

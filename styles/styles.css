@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    transition: .3s;
 }
 
 body {
@@ -12,76 +15,3 @@ body {
     margin: 0;
     font-size: 16px;
 }
-
-/* HEADER */
-
-/* header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding: 5px 10px;
-}
-
-.logo {
-    color: #FFF;
-    font-weight: 700;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
-.connexion {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 310px;
-}
-
-.register {
-    border: solid 5px #FFF;
-    background-color: #3767DA;
-    color: #FFF;
-    height: 50px;
-    width: 150px;
-}
-
-.login {
-    border: solid 5px #FFF;
-    background-color: #FFF;
-    color: #3767DA;
-    height: 50px;
-    width: 150px;
-}
-
-.login:hover, .register:hover {
-    cursor: pointer;
-    background-color: #FFF;
-    color: #3767DA;
-}
-
-@media (max-width: 950px) { 
-    .logo {
-        font-size: 1.8rem;
-    }
-
-    .login, .register{
-        height: 40px;
-        border: solid 4px #FFF;
-    }
-}
-@media (max-width: 670px) {
-    header {
-        flex-direction: column;
-    }
-    
-    .logo {
-        font-size: 1.3rem;
-    }
-
-    .login, .register{
-        height: 30px;
-        border: solid 2px #FFF;
-    }
-} */
