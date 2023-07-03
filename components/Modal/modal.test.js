@@ -15,9 +15,14 @@ describe('Test Modal component', () => {
         expect(getByTestId('modal-container')).toBeInTheDocument();
     });
 
+    test('Should render the exit logo', () => {
+        const { getByRole } = render(<Modal />);
+        expect(getByRole('img')).toBeInTheDocument();
+    });
+
     test('Should call exit', () => {
-        const { getByTestId } = render(<Modal exit={exit} />);
-        fireEvent.click(getByTestId('modal'));
+        const { getByRole } = render(<Modal exit={exit} />);
+        fireEvent.click(getByRole('img'));
         expect(exit).toBeCalled();
     });
 })

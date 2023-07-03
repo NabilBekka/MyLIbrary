@@ -10,6 +10,16 @@
 
 .container {
     opacity: 1;
-    min-height: 50vh;
-    min-width: 50vw;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
