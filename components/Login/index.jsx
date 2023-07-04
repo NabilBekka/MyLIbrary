@@ -33,7 +33,10 @@ const Login = ({exit}) => {
         </div>
         <div className={styles.toConnectDiv}>
             <p className={styles.forgotPassword} onClick={() => exit('forgotPassword')}>Mot de passe oublié?</p>
-            <button className={styles.toConnectBtn}>Connexion</button>
+            <button 
+              className={styles.toConnectBtn} 
+              disabled= {password.length<6 || !email.includes('@')}
+            >Connexion</button>
         </div>
     </form>
   )

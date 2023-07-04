@@ -27,7 +27,7 @@ const Header = () => {
             { displayModal && <Modal exit={handleModal}><div>
                 {content === 'login' ? <Login exit={handleModal} /> :
                  content === 'register' ? <Register exit={handleModal} /> :
-                 content === 'forgotPassword' ? <ForgotPassword /> : null}
+                 content === 'forgotPassword' ? <ForgotPassword exit={handleModal}/> : null}
                 </div></Modal>}
         </header>
     )

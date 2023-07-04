@@ -1,5 +1,6 @@
 .form {
     background-color: #3767DA;
+    border: solid 5px #FFF;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -29,6 +30,7 @@
 
 .toConnectDiv {
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .toConnectBtn {

@@ -5,18 +5,22 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 20vh 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     opacity: 1;
     position: relative;
+    width: 60vw;
+    max-width: 650px;
 }
 
 .logo {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
 }
 
 .logo:hover {

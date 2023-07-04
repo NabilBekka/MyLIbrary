@@ -37,9 +37,33 @@
         border: solid 4px #FFF;
     }
 }
+
 @media (max-width: 670px) { 
     .login, .register{
         height: 30px;
         border: solid 2px #FFF;
+    }
+
+    .login:hover, .register:hover {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 330px) { 
+    .connexion {
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .login, .register{
+        height: 30px;
+        width: 120px;
+        margin: 0 5px;
+        border: solid 2px #FFF;
+        font-size: 0.8rem;
+    }
+
+    .login:hover, .register:hover {
+        font-size: 0.9rem;
     }
 }

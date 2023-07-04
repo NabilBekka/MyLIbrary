@@ -65,4 +65,21 @@ describe('Test Login component', () => {
         fireEvent.submit(getByTestId('login'));
         expect(exit).toBeCalled();
       });
+
+    test('Should check if the button is disabled', () => {
+        const { getByRole, getByPlaceholderText } = render(<Login />);
+        const button = getByRole('button');
+        const email = getByPlaceholderText('Entrer votre email');
+        const password = getByPlaceholderText('Entrer votre mot de passe');
+        expect(button).toBeDisabled();
+        fireEvent.change(email, { target: { value: 'jonedoe@gmail.com' } });
+        fireEvent.change(password, { target: { value: 'myPassword' } });
+        expect(button).not.toBeDisabled();
+        fireEvent.change(email, { target: { value: 'jonedoe' } });
+        fireEvent.change(password, { target: { value: 'myPassword' } });
+        expect(button).toBeDisabled();
+        fireEvent.change(email, { target: { value: 'jonedoe@gmail.com' } });
+        fireEvent.change(password, { target: { value: 'myPa' } });
+        expect(button).toBeDisabled();
+      });
 });

@@ -88,7 +88,7 @@ describe('Test Register component', () => {
         expect(password.value).toBe('myPasseword');
     });
 
-    test('Should check that the button is disabled or not disabled ', () => {
+    test('Should check that the button is disabled or not disabled', () => {
         const { getByRole, getByPlaceholderText } = render(<Register />);
         const firstname = getByPlaceholderText('Entrez votre prénom');
         const lastname = getByPlaceholderText('Entrez votre nom');

@@ -45,8 +45,12 @@ describe ('Test Header component', () => {
     });
 
     test('should render profil after connection', () => {
-        const { getByText } = render(<Header />);
+        const { getByText, getByPlaceholderText } = render(<Header />);
         fireEvent.click(getByText('Se connecter'));
+        const email = getByPlaceholderText('Entrer votre email');
+        const password = getByPlaceholderText('Entrer votre mot de passe');
+        fireEvent.change(email, { target: { value: 'jonedoe@gmail.com' } });
+        fireEvent.change(password, { target: { value: 'myPassword' } });
         fireEvent.click(getByText('Connexion'));
         expect(getByText('Mon profil')).toBeInTheDocument();
     });

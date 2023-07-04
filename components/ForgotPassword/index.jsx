@@ -4,43 +4,40 @@ import styles from "../Login/styles.module.css";
 const ForgotPassword = ({exit}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [isReset, setIsReset] = useState(false);
 
   useEffect(() => {
-     setTimeout(() => setIsLoading(false), 1500);
+     setTimeout(() => setIsLoading(false), 1000);
   }, []);
 
   const handleSubmit = e => {
     e.preventDefault();
-    exit('profil');
+    setIsReset(true);
+    setTimeout(() => {
+      exit('');
+    },10000);
   }
 
   return (
     <form className={styles.form} data-testid='forgotPassword' onSubmit={handleSubmit}>
       {
-        isLoading ? <div>Chargement ...</div> : <>
+        isLoading ? <div>Chargement ...</div> : isReset? 
+        <p style={{textAlign: 'center'}}>Un mail de réinitialisation a été envoyer à votre adresse email, si celle-ci est valide</p> :
+        <>
+          <h2 style={{textAlign: 'center'}}>Réinitialisation du mot de passe</h2>
           <div className={styles.inputDiv}>
               <label className={styles.label}>Email:</label>
               <input
-                type="email" placeholder="Entrer votre email"
+                type="email" placeholder="Entrez votre email"
                 className={styles.input}
                 value={email}
                 onChange={e => setEmail(e.target.value)}
               />
           </div>
-          <div className={styles.inputDiv}>
-              <label className={styles.label}>Mot de passe:</label>
-              <input
-                type="password"
-                placeholder="Entrer votre mot de passe"
-                className={styles.input}
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-              />
-          </div>
-          <div className={styles.toConnectDiv}>
-              <button className={styles.toConnectBtn}>Connexion</button>
-          </div>
+          <button 
+            className={styles.toConnectBtn}
+            disabled= { !email.includes('@') }
+          >Réinitialiser</button>
         </>    
       }
     </form>
