@@ -8,7 +8,6 @@ import Register from "../Register";
 import ForgotPassword from "../ForgotPassword";
 
 const Header = () => {
-    const [isLogin, setIsLogin] = useState(false);
     const [content, setContent] = useState('');
     const [displayModal, setDisplayModal] = useState(false);
 
@@ -22,7 +21,6 @@ const Header = () => {
     return (
         <header className={styles.header} data-testid="header">
             <Link className={styles.logo} href='/'>MY LIBRARY</Link>
-            {/* {content === 'forgotPassword' && <ForgotPassword />} */}
             {content === 'profil' ? <button className={styles.myProfil}>Mon profil</button> : <Connexion displayModal={handleModal} />}
             { displayModal && <Modal exit={handleModal}><div>
                 {content === 'login' ? <Login exit={handleModal} /> :

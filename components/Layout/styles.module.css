@@ -1,5 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&display=swap');
+
 .main {
-    background-color: #FFF;
+    background-color: #F3F2ED;
     min-height: 80vh;
     margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Belanosima', sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+.p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Belanosima', sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+.input {
+    width: 550px;
+    height: 60px;
+    background-color: #FFF;
+    border: solid 5px #8198E0;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 950px) { 
+    .h1 {
+        font-size: 2.5rem;
+    }
+
+    .p {
+        font-size: 1.3rem;
+    }
+
+    .input {
+        width: 500px;
+    }
+}
+
+@media (max-width: 670px) { 
+    .h1 {
+        font-size: 2rem;
+    }
+
+    .p {
+        font-size: 1.1rem;
+    }
+
+    .input {
+        width: 350px;
+        border: solid 4px #8198E0;
+    }
+}
+
+@media (max-width: 410px) { 
+    .h1 {
+        font-size: 1.6rem;
+    }
+
+    .p {
+        font-size: 1rem;
+    }
+
+    .input {
+        width: 80vw;
+        font-size: 1rem;
+        height: 50px;
+        border: solid 3px #8198E0;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 330px) { 
+    .h1 {
+        font-size: 1.4rem;
+    }
+
+    .p {
+        font-size: 0.9rem;
+    }
+
+    .input {
+        width: 80vw;
+        font-size: 0.9rem;
+    }
 }

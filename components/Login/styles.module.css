@@ -1,7 +1,7 @@
 .form {
     background-color: #3767DA;
     border: solid 5px #FFF;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

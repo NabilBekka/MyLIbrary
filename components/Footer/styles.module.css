@@ -1,8 +1,10 @@
 .footer {
+    background: linear-gradient(#F3F2ED, #3767DA);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    min-height: 100px;
 }
 
 @media (max-width: 670px) {

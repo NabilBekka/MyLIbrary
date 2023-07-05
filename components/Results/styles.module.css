@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&display=swap');
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    border: solid 5px rgba(0,0,0, 0.1);
+    border-radius: 20px;
+    height: 200px;
+    padding: 20px 5%;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.img {
+    height: 160px;
+    display: block;
+    border-radius: 20px;
+    margin-right: 5%;
+}
+
+.infos {
+    width: 50%;
+}
+
+.h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.span {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.button {
+    width: 20%;
+    height: 50px;
+    background-color: rgba(0,0,0, 0.1);
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .result {
+        height: 180px;
+        border-radius: 18px;
+    }
+
+    .img {
+        height: 140px;
+        border-radius: 18px;
+    }
+
+    .h2 {
+        font-size: 1.4rem;
+    }
+
+    .p {
+        font-size: 1rem;
+    }
+
+    .span {
+        font-size: 1rem;
+    }
+
+    .button {
+        height: 40px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 670px) {
+    .result {
+        height: 140px;
+        border-radius: 12px;
+    }
+
+    .img {
+        height: 100px;
+        border-radius: 12px;
+    }
+
+    .h2 {
+        font-size: 1rem;
+    }
+
+    .p {
+        font-size: 0.7rem;
+    }
+
+    .span {
+        font-size: 0.7rem;
+    }
+
+    .button {
+        height: 30px;
+        font-size: 0.7rem;
+        border-radius: 7px;
+    }
+}
+
+@media (max-width: 500px) {
+    .result {
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    .img {
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    .h2 {
+        font-size: 0.8rem;
+    }
+
+    .p {
+        font-size: 0.6rem;
+    }
+
+    .span {
+        font-size: 0.6rem;
+    }
+
+    .button {
+        height: 25px;
+        font-size: 0.6rem;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 370px) {
+    .result {
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .img {
+        height: 70px;
+        border-radius: 8px;
+    }
+
+    .h2 {
+        font-size: 0.6rem;
+    }
+
+    .p {
+        font-size: 0.4rem;
+    }
+
+    .span {
+        font-size: 0.4rem;
+    }
+
+    .button {
+        height: 20px;
+        font-size: 0.4rem;
+        border-radius: 6px;
+    }
+}

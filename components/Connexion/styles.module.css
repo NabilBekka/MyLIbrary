@@ -8,20 +8,20 @@
 
 .register {
     border: solid 5px #FFF;
-    background-color: #3767DA;
+    background-color: #8198E0;
     color: #FFF;
     height: 50px;
     width: 150px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .login {
     border: solid 5px #FFF;
     background-color: #FFF;
-    color: #3767DA;
+    color: #8198E0;
     height: 50px;
     width: 150px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .login:hover, .register:hover {
