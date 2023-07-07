@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
+import { useRouter } from 'next/router';
 import Layout from '.';
 
 describe('Test Layout component', () => {

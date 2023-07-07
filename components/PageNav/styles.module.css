@@ -25,11 +25,11 @@
 }
 
 .link:hover {
-    border-bottom: solid 5px #3767DA;
+    border-bottom: solid 5px #8198E0;
 }
 
 .active {
-    border-bottom: solid 5px #3767DA;
+    border-bottom: solid 5px #8198E0;
 }
 
 @media (max-width: 670px) { 

@@ -6,6 +6,8 @@ import styles from './styles.module.css';
 import Login from "../Login";
 import Register from "../Register";
 import ForgotPassword from "../ForgotPassword";
+import Image from "next/image";
+import parameterLogo from "../../public/images/parameter.svg";
 
 const Header = () => {
     const [content, setContent] = useState('');
@@ -27,6 +29,7 @@ const Header = () => {
                  content === 'register' ? <Register exit={handleModal} /> :
                  content === 'forgotPassword' ? <ForgotPassword exit={handleModal}/> : null}
                 </div></Modal>}
+            <Image src={parameterLogo} alt="parameter" className={styles.parameterLogo}/>
         </header>
     )
 }

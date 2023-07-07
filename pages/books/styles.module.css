@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&display=swap');
+
+.books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin-bottom: 50px;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: solid 5px red;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 850px;
+    height: 100px;
+    padding: 20px 20%;
+    color: red;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 950px){
+    .error {
+        border: solid 4px red;
+        border-radius: 8px;
+        height: 90px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 670px){
+    .error {
+        border: solid 3px red;
+        border-radius: 6px;
+        height: 70px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 490px){
+    .error {
+        border: solid 2px red;
+        border-radius: 4px;
+        height: 50px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 380px){
+    .error {
+        border-radius: 3px;
+        height: 40px;
+        font-size: 0.5rem;
+    }
+}

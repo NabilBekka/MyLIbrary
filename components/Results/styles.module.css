@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 80vw;
+    margin-bottom: 50px;
 }
 
 .result {
@@ -13,16 +14,86 @@
     justify-content: space-between;
     align-items: center;
     background-color: #FFF;
-    border: solid 5px rgba(0,0,0, 0.1);
-    border-radius: 20px;
     height: 200px;
     padding: 20px 5%;
     margin: 20px 0;
     width: 100%;
 }
 
+.resultBook {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    min-height: 200px;
+    padding: 20px 5%;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.infosBook {
+    width: 60%;
+}
+
+.authorsDiv {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.authors {
+    font-size: 1rem;
+}
+
+.authorsUl {
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.publisher {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.publisherSpan {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 2%;
+}
+
+.descriptionBtn {
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1rem;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+}
+
+.descriptionBtn:hover {
+    cursor: pointer;
+}
+
+.descriptionDiv {
+    background-color: #000;
+    border-radius: 20px;
+    padding-top: 20px;
+    color: #FFF;
+    width: 100%;
+    min-height: 50vh;
+}
+
 .img {
     height: 160px;
+    max-width: 20%;
     display: block;
     border-radius: 20px;
     margin-right: 5%;
@@ -54,23 +125,22 @@
 .button {
     width: 20%;
     height: 50px;
-    background-color: rgba(0,0,0, 0.1);
-    border: none;
-    border-radius: 10px;
+    background-color: #FFF;
+    border: solid 1px #000;
+    border-radius: 2px;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 700;
 }
 
 .button:hover {
-    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
 @media (max-width: 950px) {
     .result {
         height: 180px;
-        border-radius: 18px;
     }
 
     .img {
@@ -93,14 +163,12 @@
     .button {
         height: 40px;
         font-size: 1.1rem;
-        border-radius: 8px;
     }
 }
 
 @media (max-width: 670px) {
     .result {
         height: 140px;
-        border-radius: 12px;
     }
 
     .img {
@@ -123,14 +191,40 @@
     .button {
         height: 30px;
         font-size: 0.7rem;
-        border-radius: 7px;
+    }
+
+    .resultBook {
+        padding: 10px 5%;
+    }
+
+    .authorsDiv {
+        font-size: 0.8rem;
+    }
+
+    .authors {
+        font-size: 0.8rem;
+    }
+
+    .authorsUl {
+        font-size: 0.8rem;
+    }
+
+    .publisher {
+        font-size: 0.8rem;
+    }
+
+    .publisherSpan {
+        font-size: 0.8rem;
+    }
+
+    .descriptionBtn {
+        font-size: 0.8;
     }
 }
 
 @media (max-width: 500px) {
     .result {
         height: 120px;
-        border-radius: 10px;
     }
 
     .img {
@@ -153,14 +247,42 @@
     .button {
         height: 25px;
         font-size: 0.6rem;
-        border-radius: 8px;
+    }
+
+    .resultBook {
+        padding: 2px 5%;
+    }
+
+    .authorsDiv {
+        font-size: 0.5rem;
+    }
+
+    .authors {
+        font-size: 0.5rem;
+    }
+
+    .authorsUl {
+        font-size: 0.5rem;
+    }
+
+    .publisher {
+        font-size: 0.5rem;
+    }
+
+    .publisherSpan {
+        font-size: 0.5rem;
+    }
+
+    .descriptionBtn {
+        font-size: 0.6rem;
+        width: 80px;
+        height: 20px;
     }
 }
 
 @media (max-width: 370px) {
     .result {
         height: 100px;
-        border-radius: 8px;
     }
 
     .img {
@@ -183,6 +305,5 @@
     .button {
         height: 20px;
         font-size: 0.4rem;
-        border-radius: 6px;
     }
 }

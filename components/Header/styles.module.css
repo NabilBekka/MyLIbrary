@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 5px 30px;
+    padding: 5px 60px 5px 30px;
 }
 
 .logo {
@@ -20,7 +20,7 @@
 
 .myProfil{
     border: solid 5px #FFF;
-    background-color: #3767DA;
+    background-color: #8198E0;
     color: #FFF;
     height: 50px;
     width: 150px;
@@ -29,8 +29,23 @@
 .myProfil:hover {
     cursor: pointer;
     background-color: #FFF;
-    color: #3767DA;
+    color: #8198E0;
 }
+
+.parameterLogo {
+    position: absolute;
+    display: block;
+    top: 30px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+}
+
+.parameterLogo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+} 
 
 @media (max-width: 950px) { 
     .logo {
@@ -45,6 +60,7 @@
 @media (max-width: 670px) {
     .header {
         flex-direction: column;
+        padding-right: 30px;
     }
     
     .logo {
@@ -54,5 +70,21 @@
     .myProfil{
         height: 30px;
         border: solid 2px #FFF;
+    }
+
+    .parameterLogo {
+        top: 10px;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 410px) {
+    .parameterLogo {
+        top: 10px;
+        right: 10px;
+        height: 20px;
+        width: 20px;
     }
 }

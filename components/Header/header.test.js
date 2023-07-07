@@ -13,6 +13,11 @@ describe ('Test Header component', () => {
         expect(getByRole('link').textContent).toBe('MY LIBRARY');
     });
 
+    test('should render parameter logo', () => {
+        const { getByRole } = render(<Header />);
+        expect(getByRole('img')).toBeInTheDocument();
+    });
+
     test('should render Modal Component after clicking on login', () => {
         const { getByTestId, getByText } = render(<Header />);
         fireEvent.click(getByText('Se connecter'));
