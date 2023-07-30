@@ -1,22 +1,46 @@
 import Head from "next/head";
 import Results from "../../components/Results";
+import styles from "../books/styles.module.css";
 
 const Games = ({results, search}) => {
+    console.log(search)
     return (<div data-testid="games">
         <Head>
-            <title>{results !== '' ? `MY LIBRARY | Games | ${search}` : `MY LIBRARY | Games`}</title>
+            <title>{search !== '' ? `${search} - Jeux | MY LIBRARY` : `Jeux | MY LIBRARY`}</title>
         </Head>
-        <Results results={results}/>    
+        {results === 'Oups nous avons un problème !' ? <p className={styles.error}>{results}</p> : <Results results={results}/>}    
     </div>)
 }
 
-Games.getInitialProps = async  (ctx) => {
-    const search = ctx?.query?.search ?? "";
-    const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${search}&type=game`);
-    const datas = await response.json();
-    return {
-        results: datas.Search,
-        search
+export const getServerSideProps = async (context) => {
+    const search = context.query.search ?? "";
+    if (search !== ''){
+        try {
+            const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${search}&type=game`);
+            const datas = await response.json();
+            return {
+                props: {
+                    results: datas.Search,
+                    search
+                }
+            }
+        }catch(e){
+            return {
+                props: {
+                    results: 'Oups nous avons un problème !',
+                    search
+                }
+            }
+        }     
     }
-  }
+    else {
+        return {
+            props: {
+                results: [],
+                search
+            }
+        }
+    }
+};
+  
 export default Games;

@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
-import { useRouter } from 'next/router';
 import Layout from '.';
 
 describe('Test Layout component', () => {
@@ -52,5 +51,13 @@ describe('Test Layout component', () => {
         expect(getAllByRole('link')[2].textContent).toBe('Séries');
         expect(getAllByRole('link')[3].textContent).toBe('Jeux');
         expect(getAllByRole('link')[4].textContent).toBe('Livres');
+    });
+
+    test('Should reset input on submit', () => {
+        const { getByTestId, getByPlaceholderText } = render(<Layout />);
+        const input = getByPlaceholderText('Rechercher');
+        fireEvent.change(input, { target: { value: 'Marvel' } });
+        fireEvent.submit(getByTestId('form'));
+        expect(input.value).toBe('');
     });
 });

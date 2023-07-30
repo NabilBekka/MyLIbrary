@@ -26,6 +26,10 @@
     text-align: center;
 }
 
+.form {
+    position: relative;
+}
+
 .input {
     width: 550px;
     height: 60px;
