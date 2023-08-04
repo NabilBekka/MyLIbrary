@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '../../lib/redux/reduxRender';
 import BooksResult from '.';
 
 describe('Test Home component', () => {

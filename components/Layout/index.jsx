@@ -3,6 +3,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import { useState } from "react";
 import PageNav from '../PageNav';
+import store from '../../lib/redux/store';
 
 const Layout = ({children}) => {
   const [search, setSearch] = useState('');
@@ -10,7 +11,9 @@ const Layout = ({children}) => {
   const handleSubmit = e => {
     e.preventDefault();
     setSearch('');
-  }
+  };
+
+  console.log(store.getState())
   
   return (<>
     <Header />

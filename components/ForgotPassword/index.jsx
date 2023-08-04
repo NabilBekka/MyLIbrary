@@ -22,7 +22,7 @@ const ForgotPassword = ({exit}) => {
     <form className={styles.form} data-testid='forgotPassword' onSubmit={handleSubmit}>
       {
         isLoading ? <div>Chargement ...</div> : isReset? 
-        <p style={{textAlign: 'center'}}>Un mail de réinitialisation a été envoyer à votre adresse email, si celle-ci est valide</p> :
+        <p style={{textAlign: 'center'}}>Un email de réinitialisation a été envoyer à votre adresse email, si celle-ci est valide</p> :
         <>
           <h2 style={{textAlign: 'center'}}>Réinitialisation du mot de passe</h2>
           <div className={styles.inputDiv}>

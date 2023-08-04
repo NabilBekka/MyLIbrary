@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '../../lib/redux/reduxRender';
 import Connexion from '.';
 
 const dispalyModal = jest.fn();

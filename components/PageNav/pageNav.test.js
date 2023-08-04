@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render } from '../../lib/redux/reduxRender';
 import PageNav from '.';
 
 describe('Test PageNav component', () => {

@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from '../../lib/redux/reduxRender';
 import ForgotPassword from ".";
 import { act } from "react-dom/test-utils";
 
@@ -72,6 +72,6 @@ describe('Test ForgotPassword component', () => {
             jest.runAllTimers();
         });
         fireEvent.submit(getByTestId('forgotPassword'));
-        expect(getByText('Un mail de réinitialisation a été envoyer à votre adresse email, si celle-ci est valide')).toBeInTheDocument();
+        expect(getByText('Un email de réinitialisation a été envoyer à votre adresse email, si celle-ci est valide')).toBeInTheDocument();
     });    
 });
