@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { render } from "@testing-library/react";
 import { Provider } from "react-redux"
-import searchReducer from "./features/searchSlice";
+import searchReducer from "./features/search/searchSlice";
 
 const customRender = (ui, options) => {
     const store = configureStore({

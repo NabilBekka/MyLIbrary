@@ -29,6 +29,17 @@
 }
 
 .active {
+    display: block;
+    width: 22%;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+    color: #3767DA;
+    background-color: #F3F2ED;
     border-bottom: solid 5px #8198E0;
 }
 
